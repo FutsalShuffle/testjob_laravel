@@ -5,14 +5,14 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 /*
 *
-* Основной контроллер
+* Основной контроллер Main
 * метод get() не применяется, но может быть использован для ajax запроса
 *
 */
 class Main extends Controller
 {
     /*
-    * $all получает все филиалы с работниками
+    * @param $all получает все филиалы с работниками из бд
     * @return main.blade.php
     */
     public function show(){
@@ -20,7 +20,7 @@ class Main extends Controller
         return view('main', compact('all'));
     }
     /*
-    * Метод принимает $place_id из роутера
+    * @param int $place_id
     * Ищет всех работников по $place_id
     * @return json
     */
